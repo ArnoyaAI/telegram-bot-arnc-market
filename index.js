@@ -29,7 +29,7 @@ async function fetchMarketData() {
 
 💰 *Price*: $${data.c}
 📈 *24h Volume*: $${Math.floor(parseFloat(data.qv))}
-📉 *Price Change*: ${data.pcp}% (24h)
+📉 *Price Change*: ${parseFloat(data.pcp) * 100}% (24h)
 🪙 *Spread*: ${spread}%
 📍 *Exchange*: Toobit
 
