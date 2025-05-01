@@ -22,7 +22,7 @@ async function fetchMarketData() {
     const data = json[0];
 
     const time = new Date(data.t).toLocaleString();
-    const spread = (parseFloat(data.a) - parseFloat(data.b)).toFixed(8);
+    const spread = (((parseFloat(data.a) - parseFloat(data.b)) / parseFloat(data.a)) * 100).toFixed(2);
 
     const message = `
 📊 *${data.s} Market Snapshot* - ${time}
