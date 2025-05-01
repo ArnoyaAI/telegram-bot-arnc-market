@@ -28,7 +28,7 @@ async function fetchMarketData() {
 📊 *${data.s} Market Snapshot* - ${time}
 
 💰 *Price*: $${data.c}
-📈 *24h Volume*: $${data.qv}
+📈 *24h Volume*: $${Math.floor(parseFloat(data.qv))}
 📉 *Price Change*: ${data.pcp}% (24h)
 🪙 *Spread*: ${spread}%
 📍 *Exchange*: Toobit
